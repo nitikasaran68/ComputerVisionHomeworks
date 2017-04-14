@@ -1,0 +1,41 @@
+/* 
+Performs mean shift based filtering and region fusion. 
+*/
+
+//Specify the mean shift parameters for (fine) filtering... 
+SpatialBandwidth = 10; 
+RangeBandwidth = 20; 
+Speedup = MEDIUM;
+
+//Load an image 
+Load('AmazonGO.pgm', IMAGE);
+
+//Display progress 
+DisplayProgress ON;
+
+//Filter the image 
+Filter;
+
+//Save the filtered image 
+Save('filtimage.pnm', PNM, FILT_IMAGE);
+
+//Segment the image using a large resolution in both subspaces... 
+SpatialBandwidth = 20; 
+RangeBandwidth = 10; 
+MinimumRegionArea = 200;
+
+//Fuse the filtered image regions 
+Fuse;
+
+//Save the result 
+Save('fuseimage.pnm', PNM, SEGM_IMAGE);
+
+//Further fuse the regions using a larger minimum area 
+MinimumRegionArea = 50; 
+UseResult(SEGM_IMAGE); 
+Fuse;
+
+//Save the result 
+Save('newimage.ppm', PPM, SEGM_IMAGE);
+
+//done

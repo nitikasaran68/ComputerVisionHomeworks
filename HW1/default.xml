@@ -1,0 +1,41 @@
+<?xml version="1.0"?>                 
+<opencv_storage>
+<Settings>
+  
+  <BoardSize_Width> 6</BoardSize_Width>
+  <BoardSize_Height>8</BoardSize_Height>
+  
+  
+  <Square_Size>50</Square_Size>
+  
+  
+  <Calibrate_Pattern>"CHESSBOARD"</Calibrate_Pattern>
+  
+  
+  <Input>"imgs.xml"</Input>
+  
+  <Input_FlipAroundHorizontalAxis>0</Input_FlipAroundHorizontalAxis>
+  
+  
+  <Input_Delay>10</Input_Delay>	
+  
+  
+  <Calibrate_NrOfFrameToUse>20</Calibrate_NrOfFrameToUse>
+  
+  <Calibrate_FixAspectRatio> 1 </Calibrate_FixAspectRatio>
+  
+  <Calibrate_AssumeZeroTangentialDistortion>0</Calibrate_AssumeZeroTangentialDistortion>
+  
+  <Calibrate_FixPrincipalPointAtTheCenter> 1 </Calibrate_FixPrincipalPointAtTheCenter>
+  
+  
+  <Write_outputFileName>"out_camera_data.xml"</Write_outputFileName>
+  
+  <Write_DetectedFeaturePoints>0</Write_DetectedFeaturePoints>
+  
+  <Write_extrinsicParameters>0</Write_extrinsicParameters>
+  
+  <Show_UndistortedImage>0</Show_UndistortedImage>
+ 
+</Settings>
+</opencv_storage>
